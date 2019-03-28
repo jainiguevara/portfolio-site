@@ -10,6 +10,11 @@ const resources = {
     general: {
       'welcome': 'Welcome to React and react-i18next'
     }
+  },
+  ph: {
+    general: {
+      'welcome': 'Nandito kayo sa React and react-i18next'
+    }
   }
 }
 

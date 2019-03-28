@@ -1,29 +1,25 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
-import logo from './logo.svg'
-import './App.css'
+import { Route, Switch } from 'react-router-dom'
 
-const App = () => {
-  const { t } = useTranslation()
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {t('welcome')} <br/>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  )
-}
+import Main from './containers/Main'
+import Home from './components/Home'
+import GettingStarted from './components/GettingStarted'
+
+const App = () => (
+  <Main>
+    <Switch>
+      <Route
+        exact
+        path="/"
+        component={Home}
+      />
+
+      <Route
+        path="/start"
+        component={GettingStarted}
+      />
+    </Switch>
+  </Main>
+)
 
 export default App
