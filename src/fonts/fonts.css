@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: bold;
+  font-weight: 600;
+  src: url('./HelveticaNeueMedium.woff') format('woff'), /* Modern Browsers */
+      url('./HelveticaNeueMedium.ttf') format('truetype'); /* Safari, Android, iOS */
+  src: local('Helvetica Neue'), local('HelveticaNeue'),
+      url('./HelveticaNeueMedium.woff') format('woff'), /* Modern Browsers */
+      url('./HelveticaNeueMedium.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('helveticaneue-roman-webfont.woff2') format('woff2'),
+    url('helveticaneue-roman-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('helveticaneue-roman-webfont.woff2') format('woff2'),
+    url('helveticaneue-roman-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('helveticaneue-light-webfont.woff2') format('woff2'),
+       url('helveticaneue-light-webfont.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: bold;
+  font-weight: 400;
+  src: url('./CenturyGothicBold.woff') format('woff'), 
+      url('./CenturyGothicBold.woff2') format('woff2'),
+      url('./CenturyGothicBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./CenturyGothic.woff') format('woff'), 
+      url('./CenturyGothic.woff2') format('woff2'),
+      url('./CenturyGothic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./CenturyGothic.woff') format('woff'), 
+      url('./CenturyGothic.woff2') format('woff2'),
+      url('./CenturyGothic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: italic;
+  font-weight: normal;
+  src: url('./CenturyGothic.woff') format('woff'), 
+      url('./CenturyGothic.woff2') format('woff2'),
+      url('./CenturyGothic.ttf') format('truetype');
+}

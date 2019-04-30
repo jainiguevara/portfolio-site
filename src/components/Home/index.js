@@ -1,28 +1,32 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import logo from './../../logo.svg'
-import './../../App.css'
+import { makeStyles } from '@material-ui/styles'
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
+
+import Logo from '../Logo'
+
+const useStyles = makeStyles(() => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  logo: {
+    height: '40vmin',
+  },
+}))
 
 const Home = () => {
+  const classes = useStyles()
   const { t } = useTranslation()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {t('welcome')} <br/>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid item xs={12}>
+      <div className={classes.root}>
+        <Logo />
+        <Typography variant="subtitle1">{t('welcome')}</Typography>
+      </div>
+    </Grid>
   )
 }
 
