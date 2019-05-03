@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  expenses-site:
+    image: expenses-site
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8080:8080
