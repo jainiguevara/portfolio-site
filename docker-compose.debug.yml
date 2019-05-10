@@ -1,8 +1,8 @@
 version: '2.1'
 
 services:
-  expenses-site:
-    image: expenses-site
+  portfolio-site:
+    image: portfolio-site
     build: .
     environment:
       NODE_ENV: development
