@@ -22,7 +22,7 @@ const Main = props => {
   const classes = useStyles()
   return (
     <Grid className={classes.root} container>
-      <Header />
+      {/* <Header /> */}
       {children}
     </Grid>
   )

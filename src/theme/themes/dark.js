@@ -1,9 +1,7 @@
 import 'typeface-roboto'
 
-import blueGrey from '@material-ui/core/colors/blueGrey'
 import grey from '@material-ui/core/colors/grey'
-import red from '@material-ui/core/colors/red'
-import orange from '@material-ui/core/colors/orange'
+import green from '@material-ui/core/colors/green'
 
 const pantoneCoolGray7 = '#98989A'
 const pantoneME = '#F4B333'
@@ -19,9 +17,9 @@ const dark = {
     primary: {
       main: grey[800],
     },
-    // secondary: {
-    //   main: grey[100],
-    // },
+    secondary: {
+      main: green[400],
+    },
     // inherit: {
     //   main: grey[100],
     // },

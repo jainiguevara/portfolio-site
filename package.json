@@ -9,6 +9,7 @@
     "i18next": "^15.0.4",
     "i18next-browser-languagedetector": "^3.0.1",
     "i18next-xhr-backend": "^2.0.1",
+    "luxon": "^1.13.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-i18next": "^10.2.0",
@@ -32,6 +33,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "eslint-plugin-react": "^7.12.4"
+    "eslint-plugin-react": "^7.12.4",
+    "react-testing-library": "^7.0.0"
   }
 }
