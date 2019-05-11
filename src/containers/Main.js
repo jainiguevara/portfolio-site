@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
 import Grid from '@material-ui/core/Grid'
 
-import Header from './Header'
+import NavigationTab from './NavigationTab'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,7 +23,8 @@ const Main = props => {
   return (
     <Grid className={classes.root} container>
       {/* <Header /> */}
-      {children}
+      <NavigationTab />
+      {/* {children} */}
     </Grid>
   )
 }
