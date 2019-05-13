@@ -4,80 +4,82 @@ import SwipeableViews from 'react-swipeable-views'
 import { makeStyles, useTheme } from '@material-ui/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
-import NoSsr from '@material-ui/core/NoSsr'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 
 import Home from './../components/Home'
+import Skills from './../components/Skills'
 
 const tabs = [
   {
     label: 'Home',
-    component: <Home />,
-    href: 'home'
+    component: Home,
   },
   {
     label: 'Skills',
-    component: <></>,
-    href: 'skills'
+    component: Skills,
   },
-  {
-    label: 'Timeline',
-    component: <></>,
-    href: 'timeline'
-  },
+  // {
+  //   label: 'Timeline',
+  //   component: Skills,
+  // },
 ]
 
-function TabContainer(props) {
-  return (
-    <Typography component="div" style={{ padding: 8 * 3 }}>
-      {props.children}
-    </Typography>
-  )
-}
+const TabContainer = ({ children, dir }) => (
+  <Typography
+    component="div"
+    dir={dir}
+    style={{ padding: 8 * 3 }}
+  >
+    {children}
+  </Typography>
+)
 
 TabContainer.propTypes = {
   children: PropTypes.node.isRequired,
-}
-
-function LinkTab(props) {
-  return <Tab component="a" onClick={event => event.preventDefault()} {...props} />
+  dir: PropTypes.string.isRequired,
 }
 
 const useStyles = makeStyles(() => ({
-  root: {
-    flexGrow: 1,
-  },
+  root: { width: '100%' },
 }))
 
-function NavigationTab() {
+const NavigationTab = props => { 
   const classes = useStyles()
   const theme = useTheme()
   const [value, setValue] = useState(0)
 
-  function handleChange(event, newValue) {
+  const handleChange = (event, newValue) => {
     setValue(newValue)
   }
-  const children = tabs[value].component
+
+  const handleChangeIndex = index => {
+    setValue(index)
+  }
+
   return (
-    <NoSsr>
-      <div className={classes.root}>
-        <AppBar position="static"  elevation={1}>
-          <Tabs variant="fullWidth" value={value} onChange={handleChange}>
-            {tabs.map(t => (
-              <LinkTab key={t.href} label={t.label} href={t.href} />
-            ))}
-          </Tabs>
-        </AppBar>
-        <SwipeableViews
-          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={value}
-          onChangeIndex={handleChange}
+    <div className={classes.root}>
+      <AppBar position="static" elevation={1}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="fullWidth"
         >
-          <TabContainer>{children}</TabContainer>
-        </SwipeableViews>
-      </div>
-    </NoSsr>
+          {tabs.map(t => <Tab key={t.label} label={t.label} />)}
+        </Tabs>
+      </AppBar>
+      <SwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={value}
+        onChangeIndex={handleChangeIndex}
+      >
+        {tabs.map(t => 
+          <TabContainer key={t.label} dir={theme.direction}>
+            <t.component {...props} />
+          </TabContainer>
+        )}
+      </SwipeableViews>
+    </div>
   )
 }
 

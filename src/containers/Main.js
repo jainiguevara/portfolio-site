@@ -18,19 +18,12 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const Main = props => {
-  const { children } = props
   const classes = useStyles()
   return (
     <Grid className={classes.root} container>
-      {/* <Header /> */}
-      <NavigationTab />
-      {/* {children} */}
+      <NavigationTab {...props} />
     </Grid>
   )
-}
-
-Main.propTypes = {
-  children: PropTypes.object.isRequired,
 }
 
 export default Main

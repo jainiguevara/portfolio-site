@@ -3,10 +3,10 @@ import 'typeface-roboto'
 import grey from '@material-ui/core/colors/grey'
 import green from '@material-ui/core/colors/green'
 
-const pantoneCoolGray7 = '#98989A'
-const pantoneME = '#F4B333'
-const pantoneLightGreen = '#B9F6CA'
-const pantone1805 = '#AF272F' //main maroon
+// const pantoneCoolGray7 = '#98989A'
+// const pantoneME = '#F4B333'
+// const pantoneLightGreen = '#B9F6CA'
+// const pantone1805 = '#AF272F' //main maroon
 
 const dark = {
   typography: {
