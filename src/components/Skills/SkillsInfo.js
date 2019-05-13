@@ -73,7 +73,7 @@ const SkillsInfo = ({ objects }) => {
   const theme = useTheme()
   const xs = useMediaQuery(theme.breakpoints.down('xs'))
   const xxs = useMediaQuery('(max-width: 320px)')
-  const logoSize = xxs ? 40 : xs ? 50 : 120
+  const logoSize = xxs ? 40 : xs ? 60 : 120
 
   return (
     <Grid item xs={12} className={classes.root}
@@ -87,7 +87,7 @@ const SkillsInfo = ({ objects }) => {
       >
         <Bar
           data={data}
-          height={xs ? 100 : 600}
+          height={450}
           width="100%"
           options={options(theme)}
         />

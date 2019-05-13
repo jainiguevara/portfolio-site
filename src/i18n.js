@@ -23,8 +23,8 @@ const resources = {
     skills: {
       frontend: 'FRONT-END',
       frontendInfo: 'I use the following technologies to develop single-page applications with responsive UI/UX:',
-      backend: 'BACK-END',
-      backendInfo: 'I use the following technologies to develop single-page applications with responsive UI/UX:',
+      backend: 'BACK-END & DB',
+      backendInfo: 'I use these technologies for DB and back-end development:',
     }
   },
   ph: {
