@@ -12,12 +12,12 @@ import Skills from './../components/Skills'
 
 const tabs = [
   {
-    label: 'Home',
-    component: Home,
-  },
-  {
     label: 'Skills',
     component: Skills,
+  },
+  {
+    label: 'Home',
+    component: Home,
   },
   // {
   //   label: 'Timeline',

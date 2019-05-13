@@ -10,10 +10,6 @@ const yearsExpJs = DateTime.local().minus({ years: 2016 }).toFormat('y')
 // (tip move them in a JSON file and import them)
 const resources = {
   en: {
-    general: {
-      'welcome': 'I develop React.js Applications',
-      'welcome-subtitle': 'I develop React.js Applications',
-    },
     branding: {
       'title': 'I DEVELOP FULL STACK',
       'title2': 'USING',
@@ -24,6 +20,12 @@ const resources = {
     contact: {
       'upwork': 'Hire me on UpWork',
     },
+    skills: {
+      frontend: 'FRONT-END',
+      frontendInfo: 'I use the following technologies to develop single-page applications with responsive UI/UX:',
+      backend: 'BACK-END',
+      backendInfo: 'I use the following technologies to develop single-page applications with responsive UI/UX:',
+    }
   },
   ph: {
     general: {

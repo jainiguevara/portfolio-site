@@ -1,45 +1,26 @@
 import React from 'react'
-import { Bar } from 'react-chartjs-2'
-import Grid from '@material-ui/core/Grid'
-import { makeStyles, useTheme } from '@material-ui/styles'
+import { Grid } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
 
-const data = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-  datasets: [
-    {
-      label: 'My First dataset',
-      backgroundColor: 'rgba(255,99,132,0.2)',
-      borderColor: 'rgba(255,99,132,1)',
-      borderWidth: 1,
-      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-      hoverBorderColor: 'rgba(255,99,132,1)',
-      data: [65, 59, 80, 81, 56, 55, 40]
-    }
-  ]
-}
+import SkillsInfo from './SkillsInfo'
+import { frontEndObjects, backEndObjects } from './data.js'
 
 const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    width: '100%',
   },
 }))
 
 const Skills = props => {
   const classes = useStyles()
+
   return (
-    <Grid item xs={12}>
-      <div className={classes.root}>
-        <Bar
-          data={data}
-          width={100}
-          height={50}
-          options={{
-            maintainAspectRatio: false
-          }}
-        />
-      </div>
+    <Grid item xs={12} className={classes.root}>
+      <SkillsInfo objects={frontEndObjects()} {...props} />
+      <SkillsInfo objects={backEndObjects()} {...props} />
     </Grid>
   )
 }
