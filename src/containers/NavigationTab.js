@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/styles'
+import SwipeableViews from 'react-swipeable-views'
+import { makeStyles, useTheme } from '@material-ui/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import NoSsr from '@material-ui/core/NoSsr'
@@ -17,12 +18,12 @@ const tabs = [
   },
   {
     label: 'Skills',
-    component: null,
+    component: <></>,
     href: 'skills'
   },
   {
     label: 'Timeline',
-    component: null,
+    component: <></>,
     href: 'timeline'
   },
 ]
@@ -51,6 +52,7 @@ const useStyles = makeStyles(() => ({
 
 function NavigationTab() {
   const classes = useStyles()
+  const theme = useTheme()
   const [value, setValue] = useState(0)
 
   function handleChange(event, newValue) {
@@ -62,12 +64,18 @@ function NavigationTab() {
       <div className={classes.root}>
         <AppBar position="static"  elevation={1}>
           <Tabs variant="fullWidth" value={value} onChange={handleChange}>
-            {tabs.map((t, i) => (
-              <LinkTab key={i} label={t.label} href={t.href} />
+            {tabs.map(t => (
+              <LinkTab key={t.href} label={t.label} href={t.href} />
             ))}
           </Tabs>
         </AppBar>
-        <TabContainer>{children}</TabContainer>
+        <SwipeableViews
+          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+          index={value}
+          onChangeIndex={handleChange}
+        >
+          <TabContainer>{children}</TabContainer>
+        </SwipeableViews>
       </div>
     </NoSsr>
   )

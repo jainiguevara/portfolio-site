@@ -4,25 +4,34 @@ import { makeStyles } from '@material-ui/styles'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import ContactAvatars from './ContactAvatars'
+import ProfileAvatar from '../ProfileAvatar'
 
 // import Logo from '../Logo'
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
   space: {
-    minHeight: '15vh'
+    minHeight: '5vh'
+  },
+  alignment: {
+    textAlign: 'center',
   },
   branding: {
     display: 'flex',
     alignItems: 'baseline',
   },
   intro: {
-    width: '50%',
-    alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '50%',
+    },
+    textAlign: 'center',
   },
   contact: {
     alignItems: 'center',
@@ -41,18 +50,21 @@ const Home = () => {
       <div className={classes.root}>
         {/* <Logo /> */}
         <div className={classes.space}>&nbsp;</div>
-        <Typography variant="h3">
+        <Typography className={classes.alignment} variant="h3">
           {t('title')}
         </Typography>
-        <Typography variant="h2">
+        <Typography className={classes.alignment} variant="h2">
           <strong>{t('single-page')}</strong>
         </Typography>
-        <Typography variant="h5">
+        <Typography className={classes.alignment} variant="h5">
           {t('title2')}
         </Typography>
-        <Typography variant="h2">
+        <Typography className={classes.alignment} variant="h2">
           React.js &amp; Node.js
         </Typography>
+        <br />
+        <br />
+        <ProfileAvatar />
         <br />
         <br />
         <Typography className={classes.intro} variant="h6">

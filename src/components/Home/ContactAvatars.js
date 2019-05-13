@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles, useTheme } from '@material-ui/styles'
+import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery'
 import green from '@material-ui/core/colors/green'
 import Avatar from '@material-ui/core/Avatar'
 import EmailIcon from '@material-ui/icons/Email'
@@ -23,13 +24,14 @@ const useStyles = makeStyles(() => ({
   text: {
     paddingRight: 10,
     paddingLeft: 5,
-  }
+  },
 }))
 
-const ContactAvatars = props => {
+const ContactAvatars = () => {
   const classes = useStyles()
+  const theme = useTheme()
   const { t } = useTranslation('contact')
-
+  const matches = useMediaQuery(theme.breakpoints.down('xs'))
   return (
     <>
       <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -45,7 +47,21 @@ const ContactAvatars = props => {
           <Avatar alt="LinkedIn: jainiguevara" className={classes.avatar} src={LinkedInLogo} />
         </a>
         <Typography className={classes.text}>or</Typography>
-        <Button component="a" href="https://www.upwork.com/fl/jainig" rel="noopener noreferrer" target="_blank" variant="contained" color="secondary">{t('upwork')}</Button>
+        <Button
+          component="a"
+          href="https://www.upwork.com/fl/jainig"
+          rel="noopener noreferrer"
+          target="_blank"
+          variant="contained"
+          color="secondary"
+          style={{ 
+            ...(matches && {
+              fontSize: 10
+            })
+          }}
+        >
+          {t('upwork')}
+        </Button>
       </div>
     </>
   )

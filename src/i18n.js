@@ -18,7 +18,7 @@ const resources = {
       'title': 'I DEVELOP FULL STACK',
       'title2': 'USING',
       'single-page': 'Single-Page Applications',
-      'intro': `Hello! I'm Jaini Guevara, I have been a full stack developer since 2008. For the last ${yearsExpJs} years I have been using React.js for front-end and Node.js as back-end.`,
+      'intro': `Hello! I'm Jaini Guevara, I have been a full stack developer since 2007. For the last ${yearsExpJs} years I have been using React.js for front-end and Node.js as back-end.`,
       'contact': 'Talk to me in the following channels below:'
     },
     contact: {
