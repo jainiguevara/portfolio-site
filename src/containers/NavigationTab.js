@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography'
 
 import Home from './../components/Home'
 import Skills from './../components/Skills'
+import About from './../components/About'
 
 const tabs = [
   {
@@ -19,10 +20,10 @@ const tabs = [
     label: 'Skills',
     component: Skills,
   },
-  // {
-  //   label: 'Timeline',
-  //   component: Skills,
-  // },
+  {
+    label: 'About',
+    component: About,
+  },
 ]
 
 const TabContainer = ({ children, dir }) => (
