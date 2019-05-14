@@ -49,6 +49,9 @@ const options = theme => ({
       }
     }]
   },
+  animation: {
+    duration: 1500,
+  },
   maintainAspectRatio: false
 })
 
@@ -87,8 +90,8 @@ const SkillsInfo = ({ objects }) => {
       >
         <Bar
           data={data}
-          height={450}
-          width="100%"
+          height={360}
+          // width="100%"
           options={options(theme)}
         />
       </Grid>

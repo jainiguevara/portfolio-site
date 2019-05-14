@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import SwipeableViews from 'react-swipeable-views'
 import { makeStyles, useTheme } from '@material-ui/styles'
@@ -49,6 +49,10 @@ const NavigationTab = props => {
   const theme = useTheme()
   const [value, setValue] = useState(0)
 
+  useEffect(() => {
+
+  }, [value])
+
   const handleChange = (event, newValue) => {
     setValue(newValue)
   }
@@ -73,9 +77,9 @@ const NavigationTab = props => {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        {tabs.map(t => 
+        {tabs.map((t, i) => 
           <TabContainer key={t.label} dir={theme.direction}>
-            <t.component {...props} />
+            <t.component {...props} value={value} index={i} />
           </TabContainer>
         )}
       </SwipeableViews>
