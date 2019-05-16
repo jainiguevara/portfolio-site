@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cloneDeep from 'lodash/fp/cloneDeep'
 import { useTranslation } from 'react-i18next'
 import { Bar } from 'react-chartjs-2'
 import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery'
@@ -50,7 +51,7 @@ const options = theme => ({
     }]
   },
   animation: {
-    duration: 1500,
+    duration: 1000,
   },
   maintainAspectRatio: false
 })
@@ -77,6 +78,7 @@ const SkillsInfo = ({ objects }) => {
   const xs = useMediaQuery(theme.breakpoints.down('xs'))
   const xxs = useMediaQuery('(max-width: 320px)')
   const logoSize = xxs ? 40 : xs ? 60 : 120
+  const chartOptions = cloneDeep(options(theme))
 
   return (
     <Grid item xs={12} className={classes.root}
@@ -92,7 +94,7 @@ const SkillsInfo = ({ objects }) => {
           data={data}
           height={360}
           // width="100%"
-          options={options(theme)}
+          options={chartOptions}
         />
       </Grid>
       {xs && <br />}

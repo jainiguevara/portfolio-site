@@ -12,7 +12,7 @@ import { autoPlay } from 'react-swipeable-views-utils'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
-const timeline = [ 1987, 2007, 2008, 2009, 2011, 2013, 2014, 2015, 2017, 2018, 2019, 'Beyond' ]
+const timeline = [ 1987, 2007, 2008, 2009, 2011, 2013, 2014, 2015, 2017, 2018, 2019, 'Goal' ]
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -94,7 +94,7 @@ const AboutSteppers = () => {
           index={activeStep}
           onChangeIndex={handleStepChange}
           enableMouseEvents
-          interval={7000}
+          interval={6000}
         >
           {timeline.map((step, index) => (
             <div key={step}>

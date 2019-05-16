@@ -27,9 +27,9 @@ const resources = {
       backendInfo: 'I use these technologies for DB and back-end development:',
     },
     timeline: {
-      1987: 'I am Jaini Guevara, I was born and raised in Tondo, Manila, Philippines. 🇵🇭',
-      2007: 'I started developing my very first full stack web site for our college thesis; I was NOT a programming major.😎',
-      2008: 'It was around March that our web site was categorized as best thesis! 🥇 Earned my BS-Information Technology diploma few weeks later.👨🏽‍🎓',
+      1987: 'I am Jaini Guevara, In 1987, I was born and raised in Tondo, Manila, Philippines. 🇵🇭 I`m a full stack developer.',
+      2007: 'I started developing my very first dynamic web site for our college thesis; I was NOT a programming major.😎',
+      2008: 'It was around March that our web site was categorized as best thesis! 🥇 Earned my BS-Information Technology diploma few weeks later.👨🏽‍🎓 I became a web developer a few months after graduation.',
       2009: 'I got my second job as a Jr. Engineer in Resorts World Manila; Doing both functional support and developer.👷🏽‍👨🏽‍💻',
       2011: 'Two years later, I got my first ever promotion! 🏆 From a Jr. Engineer to Supervisor. I am now a team lead, support and developer.👨🏽‍💼👷🏽‍👨🏽‍💻',
       2013: 'Again, Two years later, I got promoted from Supervisor to Assistant Manager. Leading a team of seven developers.🏆🏆',
@@ -37,8 +37,8 @@ const resources = {
       2015: 'My third promotion! I was up by one rank from Manager to Sr. Manager.🏆🏆🏆',
       2017: 'I became Assistant Vice President for Casino Portfolio in Star Cruises. 😱🛳',
       2018: 'One of my biggest career challenge; I risked & quit working as a corporate employee and decided to work remotely. 😵',
-      2019: 'I bravely decided to quit working as corporate employee and start my own branding as a full stack developer. 👨🏽‍💻',
-      Beyond: 'To be one of the best full stack developer while doing what I love; Surfing. 👑🥇🏆👨🏽‍💻🏄🏽‍',
+      2019: 'I bravely decided to quit working as corporate employee and start on my own as a full stack developer. 👨🏽‍💻',
+      Goal: 'To be one of the best full stack developer while doing what I love; Surfing. 👑🥇🏆👨🏽‍💻🏄🏽‍',
     }
   },
   ph: {
