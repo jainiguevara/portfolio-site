@@ -6,3 +6,7 @@ docker run \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v "$HOME":/home \
   jenkinsci/blueocean
+
+
+
+  docker exec -it 3081f6f9cd42 /bin/bash
