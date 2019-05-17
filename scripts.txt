@@ -9,4 +9,4 @@ docker run \
 
 
 
-  docker exec -it 3081f6f9cd42 /bin/bash
+  docker exec -it <container> /bin/bash
