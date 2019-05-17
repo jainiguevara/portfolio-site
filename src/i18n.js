@@ -28,7 +28,7 @@ const resources = {
     },
     timeline: {
       1987: 'I am Jaini Guevara, In 1987, I was born and raised in Tondo, Manila, Philippines. 🇵🇭 I`m a full stack developer.',
-      2007: 'I started developing my very first dynamic web site for our college thesis; I was a networking major NOT programming.😎',
+      2007: 'I started developing my very first dynamic web site for our college thesis; I was a networking major. NOT programming.😎',
       2008: 'It was around March that our web site was categorized as best thesis! 🥇 Earned my BS-Information Technology diploma few weeks later.👨🏽‍🎓 I became a web developer a few months after graduation.',
       2009: 'I got my second job as a Jr. Engineer in Resorts World Manila; Doing both functional support and developer.👷🏽‍👨🏽‍💻',
       2011: 'Two years later, I got my first ever promotion! 🏆 From a Jr. Engineer to Supervisor. I am now a team lead, support and developer.👨🏽‍💼👷🏽‍👨🏽‍💻',
