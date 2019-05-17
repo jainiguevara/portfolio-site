@@ -88,7 +88,9 @@ const AboutSteppers = () => {
   return (
     <Grid item xs={12} className={classes.root}>
       {!xs || !xxs ? <div className={classes.space}>&nbsp;</div> : null}
-      <div className={classes.stepper}>
+      <div className={classes.stepper} 
+        style={{ ...(xxs && { width: '100%' }) }}
+      >
         <AutoPlaySwipeableViews
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={activeStep}
@@ -111,7 +113,10 @@ const AboutSteppers = () => {
                       <strong>{timeline[activeStep]}</strong>
                     </Typography>
                   </Avatar>
-                  <Typography variant={xxs ? 'subtitle1' : xs ? 'h6' : 'h5'} className={classes.description}>
+                  <Typography
+                    variant={xxs ? 'h6' : xs ? 'h6' : 'h5'}
+                    className={classes.description}
+                  >
                     {t(timeline[activeStep])}
                   </Typography>
                 </div>
@@ -137,7 +142,6 @@ const AboutSteppers = () => {
             Back
           </Button>
         }
-        // style={{ maxWidth:  }}
       />
     </Grid>
   )

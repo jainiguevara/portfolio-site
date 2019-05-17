@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/styles'
 import Grid from '@material-ui/core/Grid'
 
 import NavigationTab from './NavigationTab'
-import ThemeButton from '../components/Menu/ThemeButton';
+import ThemeButton from '../components/Menu/ThemeButton'
 
 const useStyles = makeStyles(theme => ({
   root: {

@@ -1,87 +1,28 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
-import { makeStyles, useTheme } from '@material-ui/styles'
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
-import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery'
-
-import ContactAvatars from './ContactAvatars'
-import ProfileAvatar from '../ProfileAvatar'
-
-// import Logo from '../Logo'
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  space: {
-    minHeight: '5vh'
-  },
-  alignment: {
-    textAlign: 'center',
-  },
-  branding: {
-    display: 'flex',
-    alignItems: 'baseline',
-  },
-  intro: {
-    [theme.breakpoints.down('sm')]: {
-      width: '80%',
-    },
-    [theme.breakpoints.up('md')]: {
-      width: '50%',
-    },
-    textAlign: 'center',
-  },
-  contact: {
-    alignItems: 'center',
-  },
-  logo: {
-    height: '40vmin',
-  },
-}))
+import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
+import Branding from './Branding'
 
 
-const Home = () => {
-  const classes = useStyles()
-  const { t } = useTranslation('branding')
-  const xxs = useMediaQuery('(max-width: 320px)')
+const Home = props => {
+  const { value, index } = props
+  const [component, setComponent] = useState(null)
 
-  return (
-    <Grid item xs={12}>
-      <div className={classes.root}>
-        {/* <Logo /> */}
-        <div className={classes.space}>&nbsp;</div>
-        <Typography className={classes.alignment} variant={xxs ? 'h4' : 'h3'}>
-          {t('title')}
-        </Typography>
-        <Typography className={classes.alignment} variant={xxs ? 'h3' : 'h2'}>
-          <strong>{t('single-page')}</strong>
-        </Typography>
-        <Typography className={classes.alignment} variant={xxs ? 'h6' : 'h5'}>
-          {t('title2')}
-        </Typography>
-        <Typography className={classes.alignment} variant={xxs ? 'h3' : 'h2'}>
-          React.js &amp; Node.js
-        </Typography>
-        <br />
-        <br />
-        <ProfileAvatar />
-        <br />
-        <br />
-        <Typography className={classes.intro} variant="h6">
-          {t('intro')}
-        </Typography>
-        <br />
-        <Typography className={classes.contact}>
-          {t('contact')}
-        </Typography>
-        <ContactAvatars />
-      </div>
-    </Grid>
-  )
+  useEffect(() => {
+    if (value === index) {
+      setComponent(<Branding {...props} />)
+    }
+    return () => {
+      setComponent(null)
+    }
+  }, [value])
+
+  return component
+
+}
+
+Home.propTypes = {
+  value: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired
 }
 
 export default Home

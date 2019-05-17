@@ -12,12 +12,12 @@ import LinkedInLogo from './../../images/linkedin-logo.svg'
 
 const useStyles = makeStyles(() => ({
   avatar: {
-    margin: 5,
+    margin: 2.5,
     width: 60,
     height: 60,
   },
   greenAvatar: {
-    margin: 5,
+    margin: 2.5,
     width: 80,
     height: 80,
   },
@@ -31,7 +31,8 @@ const ContactAvatars = () => {
   const classes = useStyles()
   const theme = useTheme()
   const { t } = useTranslation('contact')
-  const matches = useMediaQuery(theme.breakpoints.down('xs'))
+  const xs = useMediaQuery(theme.breakpoints.down('xs'))
+  const xxs = useMediaQuery('(max-width: 361px)')
   return (
     <>
       <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -55,9 +56,8 @@ const ContactAvatars = () => {
           variant="contained"
           color="secondary"
           style={{ 
-            ...(matches && {
-              fontSize: 10
-            })
+            ...(xs && { fontSize: 10 }),
+            ...(xxs && { fontSize: 9 })
           }}
         >
           {t('upwork')}

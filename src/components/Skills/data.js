@@ -17,7 +17,7 @@ export const frontEndObjects = () => {
       backgroundColor: '#F7DF1E',
       hoverBackgroundColor: '#F3E272',
       logo: JSLogo,
-      data: [9.5, undefined, undefined, undefined, undefined]
+      data: [9, undefined, undefined, undefined, undefined]
     },
     {
       label: 'React.js',

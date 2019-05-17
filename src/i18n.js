@@ -14,11 +14,11 @@ const resources = {
       'title': 'I DEVELOP FULL STACK',
       'title2': 'USING',
       'single-page': 'Single-Page Applications',
-      'intro': `Hello! I'm Jaini Guevara, I have been a full stack developer since 2007. For the last ${yearsExpJs} years I have been using React.js for front-end and Node.js as back-end.`,
+      'intro': `Hello! I'm Jaini Guevara, I am a developer since 2007. For the last ${yearsExpJs} years I have been using React.js for front-end and Node.js as back-end.`,
       'contact': 'Talk to me in the following channels below:'
     },
     contact: {
-      'upwork': 'Hire me on UpWork',
+      'upwork': 'Hire in UpWork',
     },
     skills: {
       frontend: 'FRONT-END',
@@ -28,12 +28,12 @@ const resources = {
     },
     timeline: {
       1987: 'I am Jaini Guevara, In 1987, I was born and raised in Tondo, Manila, Philippines. 🇵🇭 I`m a full stack developer.',
-      2007: 'I started developing my very first dynamic web site for our college thesis; I was NOT a programming major.😎',
+      2007: 'I started developing my very first dynamic web site for our college thesis; I was a networking major NOT programming.😎',
       2008: 'It was around March that our web site was categorized as best thesis! 🥇 Earned my BS-Information Technology diploma few weeks later.👨🏽‍🎓 I became a web developer a few months after graduation.',
       2009: 'I got my second job as a Jr. Engineer in Resorts World Manila; Doing both functional support and developer.👷🏽‍👨🏽‍💻',
       2011: 'Two years later, I got my first ever promotion! 🏆 From a Jr. Engineer to Supervisor. I am now a team lead, support and developer.👨🏽‍💼👷🏽‍👨🏽‍💻',
       2013: 'Again, Two years later, I got promoted from Supervisor to Assistant Manager. Leading a team of seven developers.🏆🏆',
-      2014: 'I got my new job as a Manager in City of Dream Manila. Leading a team of six developers. We are one of the pioneers during property setup.👨🏽‍💼👷🏽‍👨🏽‍💻',
+      2014: 'I got my new job as a Manager in City of Dreams Manila. Leading a team of six developers. We are one of the pioneers during property setup.👨🏽‍💼👷🏽‍👨🏽‍💻',
       2015: 'My third promotion! I was up by one rank from Manager to Sr. Manager.🏆🏆🏆',
       2017: 'I became Assistant Vice President for Casino Portfolio in Star Cruises. 😱🛳',
       2018: 'One of my biggest career challenge; I risked & quit working as a corporate employee and decided to work remotely. 😵',
