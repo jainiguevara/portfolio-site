@@ -39,7 +39,7 @@ const resources = {
       2017: "I became Assistant Vice President for Casino Portfolio in Star Cruises. 😱🛳",
       2018: "One of my biggest career challenge; I risked & quit working as a corporate employee and decided to work remotely. 😵",
       2019: "I bravely decided to quit working as corporate employee and start on my own as a full stack developer. 👨🏽‍💻",
-      2020: "Due to unforseen financial circumstances, I went back to the corporate world to continue my career as a full stack developer. 🙂",
+      2020: "Due to unforseen circumstances, I went back to the corporate world to continue my career as a full stack developer. 🙂",
       Goal:
         "To be one of the best full stack developer while doing what I love; Surfing. 👑🥇🏆👨🏽‍💻🏄🏽‍"
     }
