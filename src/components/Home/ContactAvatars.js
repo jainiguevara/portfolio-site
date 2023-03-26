@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { makeStyles, useTheme } from "@material-ui/styles";
-import { unstable_useMediaQuery as useMediaQuery } from "@material-ui/core/useMediaQuery";
+import { useMediaQuery } from "@material-ui/core";
 import green from "@material-ui/core/colors/green";
 import Avatar from "@material-ui/core/Avatar";
 import EmailIcon from "@material-ui/icons/Email";
