@@ -74,8 +74,8 @@ const Home = () => {
           {t("intro")}
         </Typography>
         <br />
-        <Typography className={classes.contact}>{t("contact")}</Typography>
-        <ContactAvatars />
+        {/* <Typography className={classes.contact}>{t("contact")}</Typography> */}
+        {/* <ContactAvatars /> */}
       </div>
     </Grid>
   );

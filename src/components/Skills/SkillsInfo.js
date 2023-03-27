@@ -2,10 +2,28 @@ import React from "react";
 import PropTypes from "prop-types";
 import cloneDeep from "lodash/fp/cloneDeep";
 import { useTranslation } from "react-i18next";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+} from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { useMediaQuery } from "@material-ui/core";
 import { Grid, Typography, Avatar } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/styles";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const options = (theme) => ({
   type: "bar",

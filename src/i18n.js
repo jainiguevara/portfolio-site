@@ -7,14 +7,14 @@ import { DateTime } from "luxon";
 const yearsExpJs = DateTime.local().minus({ years: 2016 }).toFormat("y");
 
 // the translations
-// (tip move them in a JSON file and import them)
+// 🚧🚧🚧  -- move them in a JSON file and import them)
 const resources = {
   en: {
     branding: {
-      title: "I DEVELOP FULL STACK",
+      title: "JAINI GUEVARA",
       title2: "USING",
-      "single-page": "Single-Page Applications",
-      intro: `Hello! I'm Jaini Guevara, I am a developer since 2007. For the last ${yearsExpJs} years I have been using React.js for front-end and Node.js as back-end.`,
+      "single-page": "Front-End Developer",
+      intro: `He is Jaini, a developer since 2007. He's been developing applications in Javascript for the last ${yearsExpJs} years.`,
       contact: "Talk to me in the following channels below:"
     },
     contact: {
@@ -29,7 +29,7 @@ const resources = {
     },
     timeline: {
       1987: "I am Jaini Guevara, In 1987, I was born and raised in Tondo, Manila, Philippines. 🇵🇭 I`m a full stack developer.",
-      2007: "I started developing my very first dynamic web site for our college thesis; I was a networking major. NOT programming.😎",
+      2007: "I started developing my very first dynamic web site for our college thesis; I was a IT networking major. NOT programming.😎",
       2008: "It was around March that our web site was categorized as best thesis! 🥇 Earned my BS-Information Technology diploma few weeks later.👨🏽‍🎓 I became a web developer a few months after graduation.",
       2009: "I got my second job as a Jr. Engineer in Resorts World Manila; Doing both functional support and developer.👷🏽‍👨🏽‍💻",
       2011: "Two years later, I got my first ever promotion! 🏆 From a Jr. Engineer to Supervisor. I am now a team lead, support and developer.👨🏽‍💼👷🏽‍👨🏽‍💻",
