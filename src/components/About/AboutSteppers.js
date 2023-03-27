@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { makeStyles, useTheme } from "@material-ui/styles";
 import MobileStepper from "@material-ui/core/MobileStepper";
-import { unstable_useMediaQuery as useMediaQuery } from "@material-ui/core/useMediaQuery";
+import { useMediaQuery } from "@material-ui/core";
 import { Typography, Grid, Avatar, Button } from "@material-ui/core";
 import green from "@material-ui/core/colors/green";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
+import { InsertChartTwoTone } from "@material-ui/icons";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -25,7 +26,8 @@ const timeline = [
   2018,
   2019,
   2020,
-  "Goal"
+  2021,
+  2023
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -33,18 +35,16 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     [theme.breakpoints.down("xs")]: {
-      flexDirection: "column-reverse"
+      flexDirection: "column"
     },
     alignItems: "center"
-  },
-  label: {
-    backgroundColor: "red"
   },
   space: {
     height: "20vh"
   },
   stepper: {
     width: "60%",
+    margin: "1em",
     [theme.breakpoints.down("sm")]: {
       width: "100%"
     },
@@ -52,6 +52,12 @@ const useStyles = makeStyles((theme) => ({
       width: "85%"
     },
     flexGrow: 1
+  },
+  stepperButtonContainer: {
+    backgroundColor: "inherit"
+  },
+  stepperButton: {
+    color: "#444"
   },
   content: {
     display: "flex",
@@ -102,6 +108,42 @@ const AboutSteppers = () => {
   return (
     <Grid item xs={12} className={classes.root}>
       {!xs || !xxs ? <div className={classes.space}>&nbsp;</div> : null}
+      <MobileStepper
+        steps={maxSteps}
+        position="static"
+        activeStep={activeStep}
+        className={classes.stepperButtonContainer}
+        nextButton={
+          <Button
+            size="small"
+            onClick={handleNext}
+            disabled={activeStep === maxSteps - 1}
+            className={classes.stepperButton}
+          >
+            Next
+            {theme.direction === "rtl" ? (
+              <KeyboardArrowLeft />
+            ) : (
+              <KeyboardArrowRight />
+            )}
+          </Button>
+        }
+        backButton={
+          <Button
+            size="small"
+            onClick={handleBack}
+            disabled={activeStep === 0}
+            className={classes.stepperButton}
+          >
+            {theme.direction === "rtl" ? (
+              <KeyboardArrowRight />
+            ) : (
+              <KeyboardArrowLeft />
+            )}
+            Back
+          </Button>
+        }
+      />
       <div
         className={classes.stepper}
         style={{ ...(xxs && { width: "100%" }) }}
@@ -111,7 +153,7 @@ const AboutSteppers = () => {
           index={activeStep}
           onChangeIndex={handleStepChange}
           enableMouseEvents
-          interval={6000}
+          interval={5000}
         >
           {timeline.map((step, index) => (
             <div key={step}>
@@ -140,36 +182,6 @@ const AboutSteppers = () => {
           ))}
         </AutoPlaySwipeableViews>
       </div>
-      <MobileStepper
-        steps={maxSteps}
-        position="static"
-        activeStep={activeStep}
-        className={classes.mobileStepper}
-        nextButton={
-          <Button
-            size="small"
-            onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
-          >
-            Next
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowLeft />
-            ) : (
-              <KeyboardArrowRight />
-            )}
-          </Button>
-        }
-        backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowRight />
-            ) : (
-              <KeyboardArrowLeft />
-            )}
-            Back
-          </Button>
-        }
-      />
     </Grid>
   );
 };

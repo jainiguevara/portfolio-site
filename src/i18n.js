@@ -34,14 +34,14 @@ const resources = {
       2009: "I got my second job as a Jr. Engineer in Resorts World Manila; Doing both functional support and developer.👷🏽‍👨🏽‍💻",
       2011: "Two years later, I got my first ever promotion! 🏆 From a Jr. Engineer to Supervisor. I am now a team lead, support and developer.👨🏽‍💼👷🏽‍👨🏽‍💻",
       2013: "Again, Two years later, I got promoted from Supervisor to Assistant Manager. Leading a team of seven developers.🏆🏆",
-      2014: "I got my new job as a Manager in City of Dreams Manila. Leading a team of six developers. We are one of the pioneers during property setup.👨🏽‍💼👷🏽‍👨🏽‍💻",
+      2014: "I got my new job as a Manager in City of Dreams Manila (Melco Resorts). Leading a team of six developers. We are one of the pioneers during property setup.👨🏽‍💼👷🏽‍👨🏽‍💻",
       2015: "My third promotion! I was up by one rank from Manager to Sr. Manager.🏆🏆🏆",
       2017: "I became Assistant Vice President for Casino Portfolio in Star Cruises. 😱🛳",
-      2018: "One of my biggest career challenge; I risked & quit working as a corporate employee and decided to work remotely. 😵",
-      2019: "I bravely decided to quit working as corporate employee and start on my own as a full stack developer. 👨🏽‍💻",
-      2020: "Due to unforseen circumstances, I went back to the corporate world to continue my career as a full stack developer. 🙂",
-      Goal:
-        "To be one of the best full stack developer while doing what I love; Surfing. 👑🥇🏆👨🏽‍💻🏄🏽‍"
+      2018: "One of my biggest career challenge; I risked & quit working as a corporate employee and decided to work remotely at Trackland. 😵",
+      2019: "I stopped doing freelance work and got a job in Hong Kong as a Full Stack Developer for Optimum Solutions. 🇭🇰",
+      2020: "COVID-19 pandemic hits the world. I continued working in Optimum Solutions.",
+      2021: "I returned to Melco Resorts working as the Application Development Manager. Also, I was blessed to have my first baby boy. 👶",
+      2023: "I am continuing my career working for Melco Resorts and builing my family and raising our baby boy here in Hong Kong. ❤️"
     }
   },
   ph: {
